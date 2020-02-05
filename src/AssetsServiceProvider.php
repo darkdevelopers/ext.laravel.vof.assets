@@ -18,13 +18,12 @@ class AssetsServiceProvider extends ServiceProvider
     public function boot()
     {
         //$this->loadRoutesFrom(__DIR__ . '/routes/web.php');
-        //$this->loadViewsFrom(__DIR__ . '/resources/views', 'vof.admin.category');
-        //$this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'vof.admin.category');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'vof.admin.assets');
+        $this->loadTranslationsFrom(__DIR__ . '/resources/lang', 'vof.admin.assets');
         //$this->loadMigrationsFrom(__DIR__ . '/database/migrations');
-
-        /*$this->publishes([
-            __DIR__.'/database/migrations' => database_path('migrations'),
-        ], 'ext.laravel.vof.category');*/
+        $this->publishes([
+            __DIR__.'/assets/css' => public_path('css/vof.admin'),
+        ], 'ext.laravel.vof.assets');
     }
 
     public function register()
