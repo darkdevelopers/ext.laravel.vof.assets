@@ -1,0 +1,30 @@
+{
+    "name": "vof/ext.laravel.vof.assets",
+    "description": "This libary handle the upload requests.",
+    "type": "library",
+    "license": "PRIVATE",
+    "authors": [
+        {
+            "name": "Marco Schauer",
+            "email": "marco.schauer@darkdevelopers.de"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Vof\\Assets\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vof\\Assets\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vof\\Assets\\AssetsServiceProvider"
+            ]
+        }
+    }
+}
